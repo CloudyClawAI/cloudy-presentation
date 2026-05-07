@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudy - The AI Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .accent-gradient { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass rounded-full px-6 py-2">
+            <div class="text-2xl font-bold flex items-center gap-2">
+                <span class="text-3xl">☁️</span> <span class="accent-gradient">Cloudy</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#vision" class="hover:text-sky-400 transition">Vision</a>
+                <a href="#stack" class="hover:text-sky-400 transition">Tech Stack</a>
+                <a href="#capabilities" class="hover:text-sky-400 transition">Capabilities</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-block px-4 py-1 rounded-full border border-sky-500/30 text-sky-400 text-xs font-bold mb-6 tracking-widest uppercase">
+                Symanto AI Innovation
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                Your Cloud Engineer <br/> <span class="accent-gradient">Living in the Cloud</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+                Meet Cloudy: A self-aware AI agent designed to automate infrastructure, 
+                code reviews, and security testing directly from Microsoft Teams.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="glass p-4 rounded-2xl flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-400">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase font-bold">Brain</div>
+                        <div class="font-semibold">OpenClaw + LiteLLM</div>
+                    </div>
+                </div>
+                <div class="glass p-4 rounded-2xl flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+                        <i class="fas fa-server text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase font-bold">Body</div>
+                        <div class="font-semibold">Azure Ubuntu VM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="py-20 px-6 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">The Architecture</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="font-bold mb-2">OpenClaw</h3>
+                    <p class="text-sm text-slate-400">The core framework providing tool use, memory, and multi-agent coordination.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">💬</div>
+                    <h3 class="font-bold mb-2">Teams + Bot Fw</h3>
+                    <p class="text-sm text-slate-400">Seamless integration into Symanto's daily communication channel.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="font-bold mb-2">Cloudflare</h3>
+                    <p class="text-sm text-slate-400">Zero Trust tunneling to securely route messages from Teams to the Azure VM.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="font-bold mb-2">Model Agnostic</h3>
+                    <p class="text-sm text-slate-400">LiteLLM allows swapping Gemini, GPT-4, or Claude with zero downtime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Mockup -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto glass rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+            <div class="bg-slate-800 px-4 py-2 flex gap-2 border-b border-slate-700">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <div class="ml-4 text-xs text-slate-500 font-mono">cloudy@azure-vm:~/workspace</div>
+            </div>
+            <div class="p-8 code-font text-sm leading-relaxed">
+                <div class="flex gap-3">
+                    <span class="text-emerald-400">➜</span>
+                    <span>openclaw status</span>
+                </div>
+                <div class="text-slate-400 mb-4">Runtime: cloudy | Model: gemini-3-flash | Status: ONLINE</div>
+                
+                <div class="flex gap-3">
+                    <span class="text-emerald-400">➜</span>
+                    <span class="text-sky-400">Analyze PR #452 (Symanto.Monitoring.Frontend)</span>
+                </div>
+                <div class="text-slate-500 italic">... checking linting, security patterns, and logic ...</div>
+                <div class="text-emerald-500">✓ 3 potential bugs found. Review sent to MS Teams.</div>
+                
+                <div class="flex gap-3 mt-4">
+                    <span class="text-emerald-400">➜</span>
+                    <span class="text-sky-400">Run security scan on API endpoint</span>
+                </div>
+                <div class="text-amber-500">⚠ Low-risk JWT misconfiguration detected. Patching...</div>
+                <div class="flex gap-3 animate-pulse">
+                    <span class="text-sky-400">_</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-slate-500 text-sm">
+        <p>Built with ❤️ by Yusuf Demirag & Cloudy</p>
+    </footer>
+</body>
+</html>
